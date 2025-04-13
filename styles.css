@@ -1,0 +1,383 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#B18E7E; /* Couleur claire du fond */
+}
+
+/* Top bar */
+.top-bar {
+    background-color:#5B4033; /* Couleur grise douce */
+    color: white;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-bar .social-icons img {
+    width: 20px;
+    margin: 0 10px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #060606; /* Couleur beige */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo img {
+    width: 60px;
+    height: auto;
+}
+
+.navbar .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu li {
+    margin: 0 10px;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #B18E7E; /* Couleur marron clair */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: #C2B1A9; /* Grise douce pour hover */
+}
+
+/* Main Section */
+/* Main Section */
+.main-section {
+    position: relative;
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Vous pouvez ajuster la hauteur selon votre besoin */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transition douce entre les images */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Affichage de l'image active */
+.image-container img.active {
+    opacity: 1;
+}
+
+
+.main-content {
+    position: absolute; /* Position absolue pour superposer le texte */
+    top: 30%; /* Centrer le texte verticalement */
+    left: 50%; /* Centrer le texte horizontalement */
+    transform: translate(-50%, -50%); /* Centrer parfaitement le texte */
+    color: rgb(14, 1, 1); /* Texte blanc sur l'image */
+    padding: 20px;
+}
+
+.main-content h1 {
+    font-size: 3rem; /* Plus grand pour plus d'impact */
+    color: #050000;
+    font-weight: 700; /* Poids plus fort */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    text-transform: uppercase; /* Majuscules */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+.main-content p {
+    font-size: 1.2rem; /* Légèrement plus grand */
+    color: #0a0000;
+    font-style: italic; /* Style légèrement incliné */
+    line-height: 1.6; /* Interligne plus large */
+    max-width: 600px; /* Limiter la largeur du texte pour le rendre plus lisible */
+    margin: 0 auto; /* Centrer le paragraphe */
+}
+button {
+    background-color: #B18E7E; /* Couleur marron clair en accord avec le design général */
+    color: white; /* Texte en blanc pour le contraste */
+    font-size: 1rem; /* Taille du texte légèrement réduite */
+    font-weight: bold; /* Texte en gras pour un effet plus affirmé */
+    padding: 8px 16px; /* Espacement réduit pour un bouton plus compact */
+    border: none; /* Aucune bordure par défaut */
+    border-radius: 8px; /* Coins légèrement arrondis */
+    cursor: pointer; /* Change le curseur au survol */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Effets au survol */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Ombre douce autour du bouton pour lui donner de la profondeur */
+    text-transform: uppercase; /* Mettre le texte en majuscules */
+}
+
+/* Effet au survol */
+button:hover {
+    background-color: #C2B1A9; /* Couleur de fond plus claire au survol */
+    transform: translateY(-1px); /* Effet de "flottement" réduit */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légèrement accentuée au survol */
+}
+
+/* Effet de focus lorsque l'utilisateur clique sur le bouton */
+button:focus {
+    outline: none; /* Retirer l'effet de contour */
+    box-shadow: 0 0 0 3px rgba(178, 142, 126, 0.5); /* Ombre portée plus discrète autour du bouton */
+}
+/* Concept Section */
+.concept-section {
+    background-color: #76615b; /* Fond en harmonie avec le design général */
+    color: #FFFFFF; /* Texte blanc pour un bon contraste */
+    padding: 60px 20px; /* Espacement généreux pour une bonne lisibilité */
+    text-align: center;
+}
+
+.concept-container {
+    max-width: 800px; /* Limite la largeur du contenu */
+    margin: 0 auto; /* Centre la section */
+    line-height: 1.8; /* Interligne pour améliorer la lisibilité */
+}
+
+.concept-section h2 {
+    font-size: 2.5rem; /* Titre légèrement plus petit que celui de la section principale */
+    font-weight: bold;
+    margin-bottom: 20px; /* Espacement sous le titre */
+    color: #FDF8F5; /* Légère variation pour contraster avec le fond */
+    text-transform: uppercase; /* Majuscules pour un effet distinctif */
+    letter-spacing: 1.5px; /* Espacement entre les lettres */
+}
+
+.concept-section p {
+    font-size: 1.1rem; /* Texte légèrement plus grand */
+    margin-bottom: 20px; /* Espacement entre les paragraphes */
+}
+
+.concept-section p strong {
+    color: #B18E7E; /* Accent sur le nom du magasin */
+}
+
+.learn-more {
+    background-color: #B18E7E; /* Couleur marron clair */
+    color: white; /* Texte blanc pour contraste */
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase; /* Style cohérent avec le design */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Ombre pour donner de la profondeur */
+}
+
+.learn-more:hover {
+    background-color: #C2B1A9; /* Couleur légèrement plus claire */
+    transform: translateY(-2px); /* Léger effet de "flottement" */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Section générale */
+/* Section Nos engagements */
+/* Section Nos engagements */
+.commitments-section {
+    padding: 50px 20px;
+    background-color: #C2B1A9; /* Couleur de fond douce et élégante */
+}
+
+.commitments-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Titre de la section */
+.commitments-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #5B4033; /* Couleur marron profond pour le texte */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre subtile pour un effet chic */
+   
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Conteneur des blocs */
+.commitments-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Permet d'adapter les blocs aux petits écrans */
+}
+
+/* Style des blocs */
+.commitment-block {
+    flex: 1;
+    background: linear-gradient(145deg, #FFFFFF, #F4F4F4); /* Dégradé subtil pour un effet premium */
+    padding: 20px;
+    border-radius: 15px; /* Coins arrondis pour plus de douceur */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    text-align: center;
+    max-width: 350px; /* Largeur maximale pour chaque bloc */
+    margin: 0 auto; /* Centre les blocs en cas de wrap */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #D8D8D8; /* Bordure fine pour délimiter les blocs */
+}
+
+.commitment-block:hover {
+    transform: translateY(-5px); /* Effet de survol */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Ombre accentuée */
+    background: linear-gradient(145deg, #FDF8F5, #F4EDEB); /* Dégradé plus clair au survol */
+}
+
+/* Titres des blocs */
+.commitment-block h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: #5B4033; /* Marron profond pour les titres */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Texte des blocs */
+.commitment-block p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666; /* Couleur gris doux pour le texte */
+    font-style: italic; /* Style léger pour le texte */
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .commitments-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .commitment-block {
+        max-width: 100%;
+    }
+}
+
+/* nos magasins */
+/* Section Nos magasins */
+.stores-section {
+    padding: 50px 20px;
+    background-color: #ffffff; /* Couleur de fond douce et élégante */
+}
+
+.stores-container {
+    text-align: center;
+}
+
+.stores-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.store-block {
+    background-color: #C2B1A9; /* Fond blanc pour les blocs */
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Ombre douce pour donner du relief */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #D8D8D8; /* Bordure légère pour délimiter les blocs */
+}
+
+.store-block:hover {
+    transform: translateY(-5px); /* Effet au survol */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    background-color: #F4F4F4; /* Couleur de fond plus claire au survol */
+}
+
+.store-block h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: #5B4033; /* Couleur marron profond */
+    font-weight: bold;
+    text-transform: uppercase; /* Majuscules pour un effet distinctif */
+    letter-spacing: 1px;
+}
+
+.store-block p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666; /* Texte gris doux pour une lecture confortable */
+    font-style: italic;
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .store-block {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+.testimonials {
+    background-color: #76615b;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 20px auto;
+    max-width: 600px;
+    font-style: italic;
+}
+.testimonials h2 {
+    font-size: 2.5rem; /* Taille de police */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    color: #FDF8F5; /* Même couleur que le titre "Notre Concept" */
+    text-transform: uppercase; /* Mettre en majuscules */
+    letter-spacing: 1.5px; /* Espacement entre les lettres */
+    text-align: center; /* Centrer le texte */
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #040404; /* Couleur beige clair */
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #B18E7E; /* Couleur marron clair */
+}
